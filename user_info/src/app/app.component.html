@@ -1,0 +1,96 @@
+
+
+         <section class="position-relative py-4 py-xl-5">
+          <div class="container position-relative">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+              <div class="card md-5">
+                <div class="card-body p-sm-5" style="height:700px">
+                  <form [formGroup]="form" (ngSubmit)="save()">
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="emtextail" class="form-control" id="name"  name="name" formControlName="firstName"  placeholder="Enter name">
+                      <small  *ngIf="firstName && firstName.invalid && firstName.touched" id="invalidName" class="form-text" style="color:red">Invalid field.</small>
+                    </div>
+                    
+
+                    <div class="form-group">
+                      <label for="Lastname">Last Name:</label>
+                      <input type="emtextail" class="form-control" id="lastName"  name="lastName" formControlName="lastName"  placeholder="Enter Last name">
+                      <small  *ngIf="lastName && lastName.invalid && lastName.touched" id="invalidName" class="form-text" style="color:red">Invalid field.</small>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label for="email">E-mail:</label>
+                      <input type="emtextail" class="form-control" id="email"  name="email" formControlName="email"  placeholder="example@mail.com">
+                      <small  *ngIf="email && email.invalid && email.touched" id="invalidName" class="form-text" style="color:red">Invalid field.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="date">Birth date:</label>
+                      <input type="date" class="form-control" id="date"  name="date" formControlName="date">
+                      <small  *ngIf="date && date.invalid && date.touched" id="invalidName" class="form-text" style="color:red">Invalid field.</small>
+                    </div>
+                    
+                    
+                    <label>Education level: 
+                      <select name="usereducation" class="form-control"  formControlName="education"  style="width:300px ;" >
+                      <option value="none">None</option>
+                      <option value="elementary">Elementary</option>
+                      <option value="high-school">High-school</option>
+                      <option value="university">University</option>
+                      <option value="master">Master</option>
+                    </select>
+                    </label><br />
+                    
+        
+                   
+        
+                    <label>Favourite ice-cream: 
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="preference" formControlName="preference" id="exampleRadios1" value="chocolate" >
+                        <label class="form-check-label" for="exampleRadios1">
+                          chocolate
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="preference" formControlName="preference" id="exampleRadios2" value="vanilla">
+                        <label class="form-check-label" for="exampleRadios2">
+                          vanilla
+                        </label>
+                      </div>
+                      <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="preference" formControlName="preference" id="exampleRadios3" value="none" checked >
+                        <label class="form-check-label" for="exampleRadios3">
+                          dont like ice-cream :(
+                        </label>
+                      </div>
+                    
+                    
+                   <br />
+                  </label><br />
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                    <button type="submit" class="btn btn-success" [disabled]="form.invalid" [style.background-color]="form.invalid ? 'gray' : 'green'" [style.border]="form.invalid ? 'gray' : 'green'" style="margin-left: 20px;">Save</button>
+                    
+                  </form>
+                
+                
+                
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+         </section>
+         
+         
+         
+          
+  
+  
+
+
+  
+  
+
+
